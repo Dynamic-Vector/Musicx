@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="albumsRowModel" type="com.pratikamansapplication.app.modules.albums.data.model.AlbumsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAlbum"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowthumbnail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View android:background="@color/bluegray_600"
+                android:id="@+id/viewThumbnail"
+                android:layout_height="@dimen/_78pxh" android:layout_width="@dimen/_78pxh"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSongdetails"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFlowerPower"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{albumsRowModel.txtFlowerPower}"
+                    style="@style/txtRobotomedium18" tools:text="@string/lbl_flower_power"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRayCharles"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{albumsRowModel.txtRayCharles}"
+                    style="@style/txtRobotoregular16" tools:text="@string/lbl_ray_charles"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtZipcode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{albumsRowModel.txtZipcode}"
+                    style="@style/txtRobotoregular16" tools:text="@string/lbl_2018"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageMoreicon"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_moreicon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_moreicon"/>
+    </LinearLayout>
+</layout>

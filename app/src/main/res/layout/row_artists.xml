@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="artistsRowModel" type="com.pratikamansapplication.app.modules.artists.data.model.ArtistsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArtist"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowthumbnail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View
+                android:background="@drawable/rectangle_bg_green_300_radius_39"
+                android:id="@+id/viewThumbnail"
+                android:layout_height="@dimen/_78pxh" android:layout_width="@dimen/_78pxh"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearArtistdetails1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLorn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{artistsRowModel.txtLorn}"
+                    style="@style/txtRobotomedium18" tools:text="@string/lbl_lorn"/>
+                <LinearLayout android:id="@+id/linearArtistdetails2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTracksCounter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{artistsRowModel.txtTracksCounter}"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_843_tracks"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_white_a700_95_radius_1_5"
+                        android:id="@+id/viewDividercircle"
+                        android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAlbumsCounter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{artistsRowModel.txtAlbumsCounter}"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_23_albums"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageMoreicon"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_moreicon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_moreicon"/>
+    </LinearLayout>
+</layout>

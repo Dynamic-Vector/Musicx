@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="playlistRowModel" type="com.pratikamansapplication.app.modules.playlist.data.model.PlaylistRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSong"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowthumbnail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <View
+                android:background="@drawable/rectangle_bg_bluegray_400_radius_30"
+                android:id="@+id/viewThumbnailOne"
+                android:layout_height="@dimen/_60pxh" android:layout_width="@dimen/_60pxh"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSongdetails"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtIvarsRevenge"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{playlistRowModel.txtIvarsRevenge}"
+                    style="@style/txtRobotomedium18" tools:text="@string/lbl_ivar_s_revenge"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDanheim"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{playlistRowModel.txtDanheim}"
+                    style="@style/txtRobotoregular14" tools:text="@string/lbl_danheim"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageMoreiconTwo"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_moreicon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_moreicon"/>
+    </LinearLayout>
+</layout>

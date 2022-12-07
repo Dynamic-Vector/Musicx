@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="albumRowModel" type="com.pratikamansapplication.app.modules.album.data.model.AlbumRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSong"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowcount"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameSongnumber1"
+                android:layout_height="@dimen/_26pxv" android:layout_width="@dimen/_26pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCount"
+                    android:layout_gravity="top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{albumRowModel.txtCount}"
+                    style="@style/txtRobotomedium18" tools:text="@string/lbl_1"/>
+                <View
+                    android:background="@drawable/rectangle_bg_white_a700_75_radius_13"
+                    android:id="@+id/viewBackgroundOne"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_26pxh" android:layout_width="@dimen/_26pxh"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSongdetails"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBurning"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{albumRowModel.txtBurning}"
+                    style="@style/txtRobotomedium18" tools:text="@string/lbl_burning"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPodvalCaplella"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{albumRowModel.txtPodvalCaplella}"
+                    style="@style/txtRobotoregular14" tools:text="@string/lbl_podval_caplella"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageMoreicon"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_moreicon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_moreicon"/>
+    </LinearLayout>
+</layout>

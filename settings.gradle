@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "pratik_aman_s_application1"

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topPlaylistsRowModel" type="com.pratikamansapplication.app.modules.topplaylists.data.model.TopPlaylistsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPlaylist"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_1">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnbookmark"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_white_a700_radius_19"
+                android:id="@+id/btnBookmark"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:paddingHorizontal="@dimen/_7pxh"
+                android:paddingVertical="@dimen/_7pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_bookmark_2" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRenaissance"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{topPlaylistsRowModel.txtRenaissance}"
+                style="@style/txtRobotomedium28" tools:text="@string/lbl_renaissance"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPlaylistdetail"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTracksCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{topPlaylistsRowModel.txtTracksCounter}"
+                    style="@style/txtRobotoregular16" tools:text="@string/lbl_843_tracks"/>
+                <View
+                    android:background="@drawable/rectangle_bg_white_a700_95_radius_1_5"
+                    android:id="@+id/viewFour"
+                    android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_3pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{topPlaylistsRowModel.txtDuration}"
+                    style="@style/txtRobotoregular16" tools:text="@string/lbl_23_hours"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imagePlay"
+            android:layout_height="@dimen/_59pxh"
+            android:layout_width="@dimen/_59pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_play_59X59"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_play_59X59"/>
+    </LinearLayout>
+</layout>

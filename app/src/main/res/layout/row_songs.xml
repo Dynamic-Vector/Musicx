@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="songsRowModel" type="com.pratikamansapplication.app.modules.homepage.data.model.SongsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearSong"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylecornerRadius">
+        <View
+            android:background="@drawable/rectangle_bg_yellow_700_radius_12"
+            android:id="@+id/viewThumbnails"
+            android:layout_height="@dimen/_181pxh" android:layout_width="@dimen/_159pxh"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtUrgentSiege"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{songsRowModel.txtUrgentSiege}"
+            style="@style/txtRobotomedium18" tools:text="@string/lbl_urgent_siege"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDamnedAnthem"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{songsRowModel.txtDamnedAnthem}"
+            style="@style/txtRobotoregular14" tools:text="@string/lbl_damned_anthem"/>
+    </LinearLayout>
+</layout>

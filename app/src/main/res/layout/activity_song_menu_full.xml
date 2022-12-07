@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="songMenuFullVM" type="com.pratikamansapplication.app.modules.songmenufull.data.viewmodel.SongMenuFullVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSongMenuFull"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/framePlayer"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameStackshadowtwo"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_550pxv"
+                android:layout_width="match_parent" style="@style/groupStylered_200">
+                <FrameLayout android:id="@+id/frameMaskHeader"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_150pxv" android:layout_width="match_parent">
+                    <ImageView android:id="@+id/imageImagesFour"
+                        android:layout_gravity="top|start"
+                        android:layout_height="@dimen/_49pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_images4}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_images4"/>
+                    <ImageView android:id="@+id/imageShadowTwo"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_150pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_shadow2}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shadow2"/>
+                </FrameLayout>
+                <LinearLayout
+                    android:id="@+id/linearColumnswipeindicator"
+                    android:layout_gravity="top|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <View
+                        android:background="@drawable/rectangle_bg_white_a700_82_radius_2_5"
+                        android:id="@+id/viewSwipeIndicator"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_5pxv" android:layout_width="@dimen/_35pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtPlayNowPlayl"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{songMenuFullVM.songMenuFullModel.txtPlayNowPlayl}"
+                        style="@style/txtRobotoregular16" tools:text="@string/msg_play_now_playl"/>
+                </LinearLayout>
+            </FrameLayout>
+            <ImageView android:id="@+id/imageShadow"
+                android:layout_gravity="bottom|start"
+                android:layout_height="@dimen/_401pxv"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_shadow}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shadow"/>
+            <LinearLayout android:id="@+id/linearColumnpodvalcaplella"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPodvalCaplella"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{songMenuFullVM.songMenuFullModel.txtPodvalCaplella}"
+                    style="@style/txtRobotoregular14" tools:text="@string/lbl_podval_caplella"/>
+                <ImageView android:id="@+id/imageIcon2Copy"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_69pxh"
+                    android:layout_width="@dimen/_330pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icon2copy"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icon2copy"/>
+                <FrameLayout android:id="@+id/frameStackline"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_8pxv" android:layout_width="@dimen/_330pxh">
+                    <ImageView android:id="@+id/imageLine"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_2pxh"
+                        android:layout_width="@dimen/_37pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_line"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_line"/>
+                    <View android:background="@color/white_A700_74"
+                        android:id="@+id/lineLineTwo"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_2pxv" android:layout_width="@dimen/_296pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_white_a700_radius_4"
+                        android:id="@+id/viewIcon"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_8pxh" android:layout_width="@dimen/_8pxh"/>
+                </FrameLayout>
+                <LinearLayout android:id="@+id/linearRowtime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{songMenuFullVM.songMenuFullModel.txtTime}"
+                        style="@style/txtRobotoregular14" tools:text="@string/lbl_0_36"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTimeOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{songMenuFullVM.songMenuFullModel.txtTimeOne}"
+                        style="@style/txtRobotoregular14" tools:text="@string/lbl_2_43"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearMusicList"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMusicList"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{songMenuFullVM.songMenuFullModel.txtMusicList}"
+                        style="@style/txtRobotoregular14_1" tools:text="@string/lbl_music_list"/>
+                    <ImageView android:id="@+id/imageArrowup"
+                        android:layout_height="@dimen/_6pxh"
+                        android:layout_width="@dimen/_11pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowup_black_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowup_black_900"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_white_a700_75_radius_19"
+                android:id="@+id/btnBookmark"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:paddingHorizontal="@dimen/_7pxh"
+                android:paddingVertical="@dimen/_7pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_bookmark_38X38" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBurningCopy"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{songMenuFullVM.songMenuFullModel.txtBurningCopy}"
+                style="@style/txtRobotobold26" tools:text="@string/lbl_burning"/>
+            <FrameLayout android:id="@+id/frameMenu"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" style="@style/groupStyleblack_900_82">
+                <ImageView android:id="@+id/imageMenubackground"
+                    android:layout_gravity="bottom|start"
+                    android:layout_height="@dimen/_633pxv"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_menubackground"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_menubackground"/>
+                <LinearLayout
+                    android:id="@+id/linearColumnswipeindicatorOne"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <View
+                        android:background="@drawable/rectangle_bg_white_a700_radius_2_5"
+                        android:id="@+id/viewSwipeIndicatorOne"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_5pxv" android:layout_width="@dimen/_35pxh"/>
+                    <LinearLayout android:id="@+id/linearRowbookmarkOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageButton
+                            android:background="@drawable/rectangle_bg_white_a700_radius_19"
+                            android:id="@+id/btnBookmarkOne"
+                            android:layout_height="@dimen/_38pxh"
+                            android:layout_width="@dimen/_38pxh"
+                            android:paddingHorizontal="@dimen/_7pxh"
+                            android:paddingVertical="@dimen/_7pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_bookmark_1" tools:ignore="ContentDescription"/>
+                        <LinearLayout
+                            android:gravity="center_horizontal"
+                            android:id="@+id/linearSongdetails"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <View android:background="@color/red_300"
+                                android:id="@+id/viewThumbnail"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_65pxh" android:layout_width="@dimen/_65pxh"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtRenaissance"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{songMenuFullVM.songMenuFullModel.txtRenaissance}"
+                                style="@style/txtRobotomedium18" tools:text="@string/lbl_renaissance"/>
+                            <LinearLayout
+                                android:id="@+id/linearSongdetails1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="horizontal">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtPodvalCaplellaOne"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{songMenuFullVM.songMenuFullModel.txtPodvalCaplellaOne}"
+                                    style="@style/txtRobotoregular14" tools:text="@string/lbl_podval_caplella"/>
+                                <View
+                                    android:background="@drawable/rectangle_bg_white_a700_95_radius_1_5"
+                                    android:id="@+id/viewDividecircle"
+                                    android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_3pxh"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtTimeTwo"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@{songMenuFullVM.songMenuFullModel.txtTimeTwo}"
+                                    style="@style/txtRobotoregular14" tools:text="@string/lbl_3_43"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <ImageButton
+                            android:background="@drawable/rectangle_bg_white_a700_75_radius_19"
+                            android:id="@+id/btnReply"
+                            android:layout_height="@dimen/_38pxh"
+                            android:layout_width="@dimen/_38pxh"
+                            android:paddingHorizontal="@dimen/_8pxh"
+                            android:paddingVertical="@dimen/_8pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_reply" tools:ignore="ContentDescription"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearAddtoplaylist"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imagePlus"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_plus"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAddtoPlaylist"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtAddtoPlaylist}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_add_to_playlist"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearArtist"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imageUser"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_21pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_user"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtArtist"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtArtist}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_artist"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearAlbum"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imageAlbumicon"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_albumicon"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_albumicon"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAlbum"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtAlbum}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_album"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearIdontlikeit"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imageLocation"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_25pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_location"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtIdontlikeit"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtIdontlikeit}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_i_don_t_like_it"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearSonglyrics"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imageFile"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_width="@dimen/_25pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_file"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_file"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSonglyrics"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtSonglyrics}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_song_lyrics"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearDownload"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700_67cornerRadius">
+                        <ImageView android:id="@+id/imageDownload"
+                            android:layout_height="@dimen/_23pxh"
+                            android:layout_width="@dimen/_23pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_download_23X23"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_download_23X23"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDownloadOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{songMenuFullVM.songMenuFullModel.txtDownloadOne}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_download"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

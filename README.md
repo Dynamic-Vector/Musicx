@@ -1,7 +1,7 @@
 
 # MusicX
 
-Made with DhiWise 
+**Made with DhiWise** 
 
 Built with AndroidX Support
 

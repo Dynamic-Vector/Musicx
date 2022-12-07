@@ -1,5 +1,5 @@
 
-# pratik_aman_s_application1
+# MusicX
 
 Built with AndroidX Support
 
